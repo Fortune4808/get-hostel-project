@@ -6,6 +6,7 @@
 <link href="<?php echo $website_url ?>/admin/portal/src/styles/animate.css" rel="stylesheet">
 <link href="<?php echo $website_url ?>/admin/portal/src/styles/paramount.css" rel="stylesheet">
 <link href="<?php echo $website_url ?>/admin/portal/src/styles/aos.css" rel="stylesheet">
+<link href="<?php echo $website_url ?>/admin/portal/src/styles/simple-scrollbar.css" rel="stylesheet">
 
 <link href="<?php echo $website_url ?>/admin/portal/src/styles/icons-1.10.2/font/bootstrap-icons.css" type="text/css" rel="stylesheet" />
 
@@ -16,6 +17,7 @@
 <script src="<?php echo $website_url ?>/admin/portal/src/js/aos.js" type="text/javascript"></script>
 <script src="<?php echo $website_url ?>/admin/portal/src/js/digitalclock.js" type="text/javascript"></script>
 <script src="<?php echo $website_url ?>/admin/portal/src/js/canvasjs.stock.min.js" type="text/javascript"></script>
+<script src="<?php echo $website_url ?>/admin/portal/src/js/simple-scrollbar.min.js" type="text/javascript"></script>
 
 <script src="<?php echo $website_url ?>/config/config.js?v=<?php echo $latest_version;?>" type="text/javascript"></script>
 <script src="<?php echo $website_url ?>/admin/portal/src/js/session-validation.js" type="text/javascript"></script>

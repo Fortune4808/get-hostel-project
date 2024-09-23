@@ -37,7 +37,8 @@
 
     <p class="pl-[25px] pt-[10px] text-[11px] text-[#424141]"><i class="bi-graph-up"></i> Showing Matrix for </p>
 
-        <!-- <div id="chartContainer1" style="height: 200px; width: 100%;"></div> -->
+        <div id="chartContainer2" style="height: 265px; width: 98%; margin:auto;"></div>
+        <script>renderChart()</script>
 <?php }?>
 
 
@@ -70,8 +71,8 @@
         <div class="w-[95%] m-auto flex justify-between items-center gap-[5px] text-[10px] text-[#ABABAB]">
             <select class="w-[40%] h-[45px] bg-white mt-[5px] pl-[20px] rounded-[5px] focus:border-black border-solid border focus:border-opacity-30" onchange="_all_active_users(this.value)">
                 <option value="">All Status</option>
-                <option value="1">Active Staff</option>
-                <option value="2">Inactive Staff</option>
+                <option value="1">Active Customers</option>
+                <option value="2">Inactive Customers</option>
             </select>
             <input class="w-[60%] h-[45px] bg-white mt-[5px] pl-[20px] rounded-[5px] outline-none focus:border-black border-solid border focus:border-opacity-30" type="text" id="search_txt" onkeyup="_all_active_users('')" placeholder="Type here to search..." title="Type here to search"/>
         </div>

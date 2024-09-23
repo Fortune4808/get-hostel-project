@@ -64,7 +64,7 @@
                 <input class="w-[100%] my-[10px] py-[15px] px-[20px] bg-white outline-none border-[#FF8A33] border-[1px] rounded-[5px]" type="password" id="c_password" placeholder="CONFIRM YOUR PASSWORD"/>
             </div>
             
-            <button class="w-[40%] bg-[#FF8A33] hover:bg-[#444444] text-white py-[15px] rounded-[5px]" title="Signup" id="submit_btn" onclick="_user_registration()">SIGN-UP <i class="bi-check2"></i></button>
+            <button class="w-[40%] bg-[#FF8A33] hover:bg-[#444444] text-white py-[15px] rounded-[5px]" title="Signup" id="submit_button" onclick="_user_registration()">SIGN-UP <i class="bi-check2"></i></button>
         </div>
     </div>
 

@@ -72,9 +72,9 @@ function _user_registration() {
   } else if (password !== c_password) { // Password confirmation check
     $('#warning-div').html('<div><i class="bi-exclamation-circle"></i></div> PASSWORDS DO NOT MATCH!<br /><span>Please ensure both passwords match</span>').fadeIn(500).delay(3000).fadeOut(100);
   } else {
-    var btn_text = $('#submit_btn').html();
-    $('#submit_btn').html('<i id="spinner" class="bi bi-arrow-repeat"></i> PROCESSING...');
-    document.getElementById('submit_btn').disabled = true;
+    var btn_text = $('#submit_button').html();
+    $('#submit_button').html('<i id="spinner" class="bi bi-arrow-repeat"></i> SUBMITTING...');
+    document.getElementById('submit_button').disabled = true;
 
     var dataString ='fullname=' + fullname + '&email_address=' + email_address + '&phoneno=' + phoneno + '&password=' + password;
 
@@ -93,15 +93,15 @@ function _user_registration() {
         var email_address=data.email_address
 
         if (success == true) {
-          $('#success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
-          $('#submit_btn').html(btn_text);
-          document.getElementById('submit_btn').disabled=false;
+          $('#success-div').html('<div><i class="bi-check-all"></i></div>SUCCESS!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#submit_button').html(btn_text);
+          document.getElementById('submit_button').disabled=false;
           sessionStorage.setItem('email_address', email_address);
           _get_otp_form(fullname,email_address);
         }else{
-          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
-          $('#submit_btn').html(btn_text);
-          document.getElementById('submit_btn').disabled=false;
+          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>ERROR!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#submit_button').html(btn_text);
+          document.getElementById('submit_button').disabled=false;
         }
       }
     });
@@ -156,7 +156,7 @@ function _finish_registration(){
         var message = data.message;
 
         if (success == true) {
-          $('#success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#success-div').html('<div><i class="bi-check-all"></i></div>SUCCESS!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
           $('#fullname').val("");
@@ -167,7 +167,7 @@ function _finish_registration(){
           alert_close();
           registration_success_alerts();
         }else{
-          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>ERROR!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
         }
@@ -229,12 +229,12 @@ function _reset_password(){
         var email_address = data.email_address;
 
         if (success == true) {
-          $('#success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#success-div').html('<div><i class="bi-check-all"></i></div>SUCCESS!' + ' ' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
           _get_resetPass_form(user_id,fullname,email_address);
         }else{
-          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>ERROR!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
         }
@@ -303,7 +303,7 @@ function _finish_reset_pass(user_id){
         var message = data.message;
 
         if (success==true){
-          $('#success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#success-div').html('<div><i class="bi-check-all"></i></div>SUCCESS!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
           sessionStorage.removeItem('user_id');
@@ -311,7 +311,7 @@ function _finish_reset_pass(user_id){
           $('#pass_email').val("");
           password_success_alerts();
         }else{
-          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>ERROR!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
         }
@@ -372,7 +372,7 @@ function _resend_otp(ids, user_id) {
       html: `
       <div style="display: flex; flex-direction: column; align-items: center;">
         <img src="all-images/image-pix/success.gif" alt="Success" style="width: 100px; height: 100px;"/>
-        <h2>Password Successfully Updated</h2>
+        <h2><strong>Password Successfully Updated</strong></h2>
         <p>You can proceed to login with your new passowrd.</p>
       </div>
     `,
@@ -397,7 +397,7 @@ function _resend_otp(ids, user_id) {
       html: `
       <div style="display: flex; flex-direction: column; align-items: center;">
         <img src="all-images/image-pix/success.gif" alt="Success" style="width: 100px; height: 100px;"/>
-        <h2>Account Successfully Created</h2>
+        <h2><strong>Account Successfully Created</strong></h2>
         <p>You can proceed to login with your Email Address and Password.</p>
       </div>
     `,

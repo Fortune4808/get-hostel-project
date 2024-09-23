@@ -6,7 +6,7 @@
         <li class="side-active flex flex-col items-center flex-grow py-[5px] border-b border-[#DBEBBE] transition-shadow duration-300 hover:bg-[#d4d4d4] hover:shadow-left-border cursor-pointer" onclick="_get_page('hostel-module')"><i class="bi-houses-fill text-[25px]"></i>Hostels</li>
         <li class="side-active flex flex-col items-center flex-grow py-[5px] border-b border-[#DBEBBE] transition-shadow duration-300 hover:bg-[#d4d4d4] hover:shadow-left-border cursor-pointer" onclick="_get_page('order-module')"><i class="bi-basket2-fill text-[25px]"></i>Order</li>
         <li class="side-active flex flex-col items-center flex-grow py-[5px] border-b border-[#DBEBBE] transition-shadow duration-300 hover:bg-[#d4d4d4] hover:shadow-left-border cursor-pointer" onclick="_get_page('publish-module')"><i class="bi-newspaper text-[25px]"></i>Publish</li>
-        <li class="side-active flex flex-col items-center flex-grow py-[5px] border-b border-[#DBEBBE] transition-shadow duration-300 hover:bg-[#d4d4d4] hover:shadow-left-border cursor-pointer" onclick="_get_form('settlings-module')"><i class="bi-gear-fill text-[25px]"></i>Settings</li>
+        <li class="flex flex-col items-center flex-grow py-[5px] border-b border-[#DBEBBE] transition-shadow duration-300 hover:bg-[#d4d4d4] hover:shadow-left-border cursor-pointer" onclick="_get_form('settlings-module')"><i class="bi-gear-fill text-[25px]"></i>Settings</li>
         <li class="side-active flex flex-col items-center flex-grow py-[5px] border-b border-[#DBEBBE] transition-shadow duration-300 hover:bg-[#d4d4d4] hover:shadow-left-border cursor-pointer" onclick="_logout_()"><i class="bi-power text-[25px]"></i>Log-Out</li>
     </ul>
 </nav>

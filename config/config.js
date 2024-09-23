@@ -7,3 +7,4 @@ var apiKey='uuefrfuerufweufeeujscssywwwuwuxbxbx64455099'; /// apikey //
 var portal_url=website_url+'/admin/portal';
 
 var access_key = sessionStorage.getItem('access_key');
+var staff_id = sessionStorage.getItem('staff_id');

@@ -12,5 +12,5 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
             img.style.display = 'block';
         };
         reader.readAsDataURL(file);
-    }
+    }
 });

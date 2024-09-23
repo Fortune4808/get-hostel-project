@@ -70,12 +70,12 @@ function _reset_password(){
         var email_address = data.email_address;
 
         if (success == true) {
-          $('#success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#success-div').html('<div><i class="bi-check-all"></i></div>SUCCESS!' + ' ' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_button').html(btn_text);
           document.getElementById('submit_button').disabled=false;
           _get_resetPass_form(staff_id,fullname,email_address);
         }else{
-          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>ERROR!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_button').html(btn_text);
           document.getElementById('submit_button').disabled=false;
         }
@@ -146,7 +146,7 @@ function _finish_reset_pass(staff_id){
         var message = data.message;
 
         if (success==true){
-          $('#success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#success-div').html('<div><i class="bi-check-all"></i></div>SUCCESS!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
           sessionStorage.removeItem('user_id');
@@ -154,7 +154,7 @@ function _finish_reset_pass(staff_id){
           $('#pass_email').val("");
           password_success_alerts();
         }else{
-          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>ERROR!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
         }
@@ -268,14 +268,14 @@ function _check_password(){
         var access_key = data.access_key;
 
         if (success==true){
-          $('#success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#success-div').html('<div><i class="bi-check-all"></i></div> SUCCESS!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
           sessionStorage.setItem('staff_id', staff_id);
           sessionStorage.setItem('access_key', access_key);
           window.location.href=portal_url;
         }else{
-          $('#not-success-div').html('<div><i class="bi-check-all"></i></div>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
+          $('#not-success-div').html('<div><i class="bi-check-all"></i></div> LOGIN ERROR!<br/>' + message + "").fadeIn(500).delay(5000).fadeOut(100);
           $('#submit_btn').html(btn_text);
           document.getElementById('submit_btn').disabled=false;
         }
